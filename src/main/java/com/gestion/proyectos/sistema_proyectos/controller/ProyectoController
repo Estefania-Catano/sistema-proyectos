@@ -1,0 +1,19 @@
+package com.gestion.proyectos.sistema.controller;
+
+import com.gestion.proyectos.sistema.model.entity.Proyecto;
+import org.springframework.web.bind.annotation.*;
+
+@RestController
+@RequestMapping("/proyectos")
+public class ProyectoController {
+
+    @GetMapping
+    public String listar() {
+        return "Funciona 🎉";
+    }
+
+    @PostMapping
+    public Proyecto crear(@RequestBody Proyecto proyecto) {
+        return proyecto;
+    }
+}
